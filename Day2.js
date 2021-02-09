@@ -10,29 +10,28 @@
          if 0 < score <= 5 , then grade = F.
 */
 
-//1 way
-
-// function getGrade(score) {
-//   return "FEDCBA"[parseInt((score > 0 ? score - 1 : 0) / 5)];
-// }
-
-//2 Way
-
-// function getGrade(score) {
-//   return "FFEDCBA"[Math.ceil(score / 5.0)];
-// }
-
-//3 Way
-
 function getGrade(score) {
-  if (0 <= score && score <= 30) {
-    return String.fromCharCode(70 - parseInt((score - 1) / 5));
-  }
+  //"FEDCBA"[parseInt((score > 0 ? score - 1 : 0) / 5)]
+
+  // let x = typeof score;
+  // x = parseInt(score);
+
+  // console.log(typeof x);
+
+  // let x = "FEDCBA"[parseInt((score > 0 ? score - 1 : 0) / 5)];
+  // return x;
+
+  x = "FEDCBA"[5];
+  return x;
+
+  // 0.8  F
+  // 5.8  A
+  // 2.8  D
 }
 
-console.log(getGrade(5));
+console.log(getGrade("5"));
 console.log(getGrade(30));
-console.log(getGrade(15));
+console.log(getGrade("15"));
 /* Test case:
      5:   F
      30:  A
